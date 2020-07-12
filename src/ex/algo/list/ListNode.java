@@ -7,6 +7,10 @@ public class ListNode {
     ListNode() {
     }
 
+    public int getVal(){
+        return val;
+    }
+
     ListNode(int val) {
         this.val = val;
     }
