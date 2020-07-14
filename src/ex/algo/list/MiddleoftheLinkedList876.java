@@ -9,20 +9,13 @@ public class MiddleoftheLinkedList876 {
     }
 
     public static ListNode middleNode(ListNode head) {
-        ListNode middle = head;
-        ListNode current = head;
-        int i = 0;
+        ListNode fast = head;
+        ListNode slow = head;
 
-        while(current.next != null){
-            current = current.next;
-
-            if(i%2 == 0){
-                middle = middle.next;
-            }
-            i++;
+        while (fast != null&&fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
         }
-
-        return middle;
-
+        return slow;
     }
 }
